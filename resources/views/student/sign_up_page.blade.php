@@ -17,26 +17,29 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 <script>
-    @if(Session::has('message'))
-        var type="{{Session::get('alert-type','info')}}"
-        switch(type){
-            case 'info':
-                toastr.info("{{ Session::get('message') }}");
-                break;
-            case 'success':
-                toastr.success("{{ Session::get('message') }}");
-                break;
-            case 'warning':
-                toastr.warning("{{ Session::get('message') }}");
-                break;
-            case 'error':
-                toastr.error("{{ Session::get('message') }}");
-                break;
-        }
-    @endif
-    $('.datepicker').datepicker({ 
-        startDate: new Date()
-    });
+	@if(Session::has('message'))
+		var type="{{Session::get('alert-type','info')}}"
+
+		switch(type){
+			case 'info':
+		         toastr.info("{{ Session::get('message') }}");
+		         break;
+	        case 'success':
+	            toastr.success("{{ Session::get('message') }}");
+	            break;
+         	case 'warning':
+	            toastr.warning("{{ Session::get('message') }}");
+	            break;
+	        case 'error':
+		        toastr.error("{{ Session::get('message') }}");
+		        break;
+		}
+	@endif
+	$('.datepicker').datepicker({ 
+
+startDate: new Date()
+
+});
 </script>
 
 <!-- <a href="{{ url('/admin') }}" class="absolute top-4 right-5 bg-red-500 text-white px-4 py-2 rounded">Go to Admin Panel</a> -->
@@ -105,9 +108,9 @@
             </div>
         </div>
         <div class="side text-gray-700 text-center lg:text-left lg:w-1/2 lg:pl-16 mt-8 lg:mt-0">
-            <h1 class="text-4xl font-bold leading-tight mt-4 mb-10">Microlink Library Management System</h1>
+            <h1 class="text-4xl font-bold leading-tight mt-4 mb-10">Microlink E-library Management System</h1>
             <div class="logo mb-40 text-center">
-                <img src="{{ asset('image/librarylogo.png') }}" alt="Library Logo" class="w-60 mx-auto">
+                <img src="{{ asset('image/book.png') }}" alt="Library Logo" class="w-60 mx-auto">
             
                  <p class="text-lg mt-5 italic">Manage your library with ease and efficiency.</p>
             </div>
@@ -115,7 +118,10 @@
     </div>
 </form>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-p
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
 </body>
 </html>
